@@ -1,0 +1,25 @@
+// Online C compiler to run C program online
+#include <stdio.h>// 0 1 1 2 3 5 8 13 21 
+//first 10 fibo number
+int main() {
+    int n,a,b,c;
+    n=10;
+    if (n<0)
+    {
+        return 0;
+    }
+    else
+    {
+        a=0;
+        b=1;
+        printf("%d",a);
+        printf(" %d",b);
+        while(--n){
+        c=a+b;
+        a=b;
+        b=c;
+        printf(" %d",c);
+        }
+    }
+    return 0;
+}
