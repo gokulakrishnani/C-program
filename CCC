@@ -1,0 +1,38 @@
+finding max without any operator,loop
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int a,b,c,d;
+    scanf("%d%d",&a,&b);
+    c=((a+b)+abs(a-b))/2;
+    d=((a+b)-abs(a-b))/2;
+    printf("Max is %d Min is %d ",c,d);
+    return 0;
+}
+output:
+52
+4
+Max is 52 Min is 4 
+
+2.Finding odd or even using bitwise
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int a,b,c,d;
+    scanf("%d",&a);
+    if(a&1==1)
+    {
+        printf("odd\n");
+    }
+    else
+    {
+        printf("even\n");
+    }
+    return 0;
+}
+
+#define sq(x) x*x
+int main() {
+    printf("%d",sq(3+3));
+    return 0;
+}
