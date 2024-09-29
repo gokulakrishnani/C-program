@@ -1,0 +1,128 @@
+// Online C compiler to run C program online
+#include<stdio.h>
+void main()
+{
+int a=10;
+int *p;
+p=&a;
+printf("Address of a %d",p);
+printf("\nvalue of a:%d",a);
+printf("\n value of a %d",++*p);
+printf("\n value of a:%d",a);
+}
+/tmp/97JLs7jxxj.o
+Address of a 591332900
+value of a:10
+ value of a 11
+ value of a:11
+
+
+#include<stdio.h>
+void main()
+{
+int arr[5]={2,4,6,8,10};
+int *p,i;
+p=&arr[0];
+for(i=0; i<5;i++){
+printf("%u\n",*(p+i)+10);
+}
+}//12
+14
+16
+18
+20
+
+#include<stdio.h>
+void main()
+{
+int arr[5]={10,20,30,40,50};
+int *p[5],i;
+for(i=0;i<5;i++)
+{
+    p[i] =&arr[i];
+    printf("%d\n",*p[i]);
+} 
+}
+10
+20
+30
+40
+50
+
+#include<stdio.h>
+void c_value(int x){
+x=x+10;
+printf ("value of x:%d\n",x);
+}
+void main(){
+//Call by value
+int a=10;
+c_value (a) ;
+printf ("Value of A After Calling:%d",a);
+}
+value of x:20
+Value of A After Calling:10
+
+#include<stdio.h>
+void c_value(int *x){
+*x=*x+10;
+printf ("value of x:%u\n",x);
+}
+void main(){
+//Call by ref
+int a=10;
+c_value (&a) ;
+printf ("Value of A After Calling:%d",a);
+}
+value of x:1180794508
+Value of A After Calling:20
+
+#include<stdio.h>
+void main()
+{
+struct student{
+int num;
+char name [10];
+float avg;
+};
+struct student s={1205, "gokul",12.3};
+printf ("Student Roll no:%d\n",s.num) ;
+printf ("Student Name is:%s\n",s.name);
+printf ("Average of the Student :%g", s.avg);
+}
+Student Roll no:1205
+Student Name is:gokul
+Average of the Student :12.3
+
+
+#include<stdio.h>
+void main(){
+union un{
+int a;
+char b;
+float c;
+};
+union un o;
+o.a=1000;
+o.b='a' ;
+o.c=45242.24;
+printf("%g",o.c);
+printf ("\n%c",o.b) ;
+printf ("\n%d",o.a);
+}
+/tmp/mkjz0gDVDs.o
+45242.2
+=
+1194375741
+
+typedef
+
+#include<stdio.h>
+void main(){
+typedef int a;
+a num[5]={1,2,3,4,5};
+for(int i=0;i<5;i++){
+    printf("%d",num[i]);
+}
+}
+12345
